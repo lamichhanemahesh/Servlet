@@ -1,0 +1,15 @@
+<web-app>
+
+	<display-name>My Htttp Servlet Application</display-name>
+	<servlet>
+		<servlet-name>myHttpServlet</servlet-name>
+		<servlet-class>MyHttpServlet</servlet-class>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myHttpServlet</servlet-name>
+		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+	
+		
+</web-app>

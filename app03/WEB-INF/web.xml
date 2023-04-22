@@ -1,0 +1,27 @@
+<web-app>
+	<servlet>
+		<servlet-name>configServlet</servlet-name>
+		<servlet-class>ConfigServlet</servlet-class>
+		
+		<init-param>
+			<param-name>driverClass</param-name>
+			<param-value>oracle.jdbc.driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+		</init-param>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>sys as sysdba</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pass</param-name>
+			<param-value>software</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>configServlet</servlet-name>
+		<url-pattern>/configServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="app007 servlet-with-annotations-eclipse">
+        <property name="context-root" value="app007_servlet-with-annotations-eclipse"/>
+        <property name="java-output-path" value="/app007 servlet-with-annotations-eclipse/build/classes"/>
+    </wb-module>
+</project-modules>

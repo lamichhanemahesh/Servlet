@@ -1,0 +1,31 @@
+<web-app>
+
+	<display-name>My Context Application</display-name>
+	<servlet>
+		<servlet-name>contextServlet</servlet-name>
+		<servlet-class>ContextServlet</servlet-class>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contextServlet</servlet-name>
+		<url-pattern>/contextServlet</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+			<param-name>driverClass</param-name>
+			<param-value>oracle.jdbc.driver</param-value>
+		</context-param>
+		<context-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+		</context-param>
+		<context-param>
+			<param-name>user</param-name>
+			<param-value>sys as sysdba</param-value>
+		</context-param>
+		<context-param>
+			<param-name>pass</param-name>
+			<param-value>software</param-value>
+		</context-param>
+		
+</web-app>

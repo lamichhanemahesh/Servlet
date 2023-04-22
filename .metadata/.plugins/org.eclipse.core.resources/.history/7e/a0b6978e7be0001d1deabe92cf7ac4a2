@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="app005 Creating servlet project with eclipse dynamic web project">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <property name="context-root" value="app005_Creating_servlet_project_with_eclipse_dynamic_web_project"/>
+        <property name="java-output-path" value="/app005 Creating servlet project with eclipse dynamic web project/build/classes"/>
+    </wb-module>
+</project-modules>

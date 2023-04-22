@@ -1,0 +1,1342 @@
+Java Application:->
+-> Standalone Application
+	* CUI Application
+	* GUI Application
+-> Enterprise Application
+	* Web Application
+	* Distributed Applications
+		- Web Based Distributed Applications
+		- Remote Based Distributed Applications
+
+Standalone App:-> 
+-> if we design and execute any java application without using client server architecture then that java application is 
+called as standalone application.
+-> there are two types of standalone application.
+i. CUI Application
+ii. GUI Application
+
+CUI VS GUI Application:->
+-> CUI application is a standalone application, it will be design in such way to take input data from users through command
+prompt and to provide output data to the user throught the same command prompt, where command prompt is acting as an user
+interace and it is supporting characters data.
+-> GUI application is a standalone application, it will be design in such way to take input data from users through the 
+collection of graphic components and to provide output data to the users throught the same collection of graphic components,
+where the collection of graphic componenets is acting as an user interface and it is supporting graphic data.
+-> To prepare standalone applications, JAVA has provided some core libraries like java.lang,java.io,java.util,java.awt,
+javax.swing,.....etc.
+
+Enterprise App:-> 
+-> if we design and execute any java application on the basis of client server architecture or by distributing application
+logic over multiple machines then that java application is called as enterprise applications.
+-> there are two types of enterprise application
+i. Web Applications
+ii. Distributed Applications
+
+Web Application Vs Distributed Applications:->
+-> Web application is a client-server application,where the complete application logic will be distributed over server 
+machine.distributed application is a client-server application,where the complete application logic will be distributed over both 
+client and server machine.
+-> In web applications, client must be browser.in distributed applications, client may be java program,an applet,a servlet,a
+jsp page,framework application like struts,jsf,spring application,...etc.
+-> To prepare web applications we are going to use some set of technologies called as web technologie like CGI,Servlets,JSPs...etc.
+to prepare distributed applications,we will use set of technologies distributed technologies like Socket Programming,RMI,CORBA,
+EJBs,Web Servives etc.
+-> The main intention of web applications is to provide dynamic response from server machine. the main intention of distributed
+applications is to establish communication between local machine and remote machine in order to get remote services from remote 
+machine to local machine.
+-> Web application are executed by both web server and application server. distributed applications are executed by only application
+server.
+-> Web applicaiton is the collection of web components and which are executed by the web containers like servlet,jsp containers.distributed application is the
+collection of distributed components like ejb component  and which are executed by ejb containers.
+
+Login Form -> durgasoft.com(servlet) -> Axis Bank(ejb)
+<--------------------------------->
+web layer
+		<------------------------------------->
+		   distributed layer
+
+In web applications, there are two types of responses:-> 
+i. Static Responses
+ii. Dynamic Responses
+
+Static Response VS Dynamic Response:->
+-> Static response is the response generated from server without executing any resource from server machine and without performing
+any action at server machine.if we generate any response from server by executing a particular resource or by perfroming an action
+at server machine then that response is called as dynamic resposne.
+-> To generate dynamic response,server has to execute an application at server machine called as web application, to prepare web 
+applications at server we have to use a set of tech called as web tech.
+ex. CGI,Servlet,JSP,PHP,RERL,ASP.NET,....etc.
+
+Q) To prepare web applications, we have already CGI technology then what is the requirement to go for Servlets?
+-> CGI is a server side tech, it was designed on the top of C programming language and scriptiong language, where c programming language is process based programming
+language, it will make CGI as process based Tech. In case of CGI applications, for every request CGI container will create a seperate process inorder to handle request,
+where process is heavy weight, it will increase application execution time and it will consume more system memeory, it will increase total response time and it will 
+reduce application performance. 
+-> Servlets is a Server side tech, it was designed on the top of java programming language, where java is thread based programming language, it will make Servlets as
+Thread based Server side tech, If we prepare Servlet application at server then container will create a seperate thread for each and every request inorder to handle that
+requests, where thread is light weight, it will take less execution time and less memory to handle requests, it will reduce application execution time and it will 
+improve application performance.
+
+Q) What are the differences between Servlets and JSPs?
+-> To preare web applications, if we use servlets then we must have very good java stuff.to prepare web applications, if we use JSP technology then it is not required
+to have java awareness.
+Note:-> The main intension of jsp tech is to reduce java code as much as possible from web application.
+-> Servlets was designed on the basis of j2se library but jsp was designed on the basis of j2se library and servlet api.
+-> Servlets are very good to take request from clients and to process requests, but servlet are not good to generate dynamic response to client with very good look and
+feel.JSPs are very good to generate dynamic response to client with very good look and feel but JSPs are not good to take request from client and to process that request.
+-> In web applications, Servlets are meant for processing and JSPs are meant for presentation.
+-> In MVC based web applications, we must use a servlet as controller and a set of JSP pages as view port.EX: Struts is MVC based web framework, where ActionServlet
+is acting as controller and a set of JSP pages are acting as View part.EX: JSF is MVC based web framework, where FacesServlet is acting as controller and a set of JSP
+pages are acting as view part.EX: Spring WEB MVC module is MVC based web framework, where DispatcherServlet is a servlet acting as Controller and a set of JSP pages are
+acting as view part.
+-> To prepare web applications, if we use only servlets then there is no clear seperation between presentation part and business part. to prepare web applications, if 
+we use only JSP pages then there is a clear seperation between presentation part and business part. 
+Note: in JSP pages, to prepare presentation part we will use HTML tags and to provide business logic we will use JSP based tags.
+-> In web applications, if we perform modifications over the existed servlet then it is mandatory to perform recompilation and reloading on to the server.In web applications
+if we perform modifications over the existed JSP pages then it is not required to perform recompilation and reloading, because JSP pages are auto compiled and auto 
+loaded.
+
+Client Server Architecture:->
+-> There are three parts in Client server architecture
+i. Client
+ii. Protocol
+iii. Server
+
+
+Client:->
+-> In web applications,Browser is acting as client.
+-> Ther role of client in web applications is to send request to the server and to get response from server.
+-> In web applications, we are able to submit request from client to server by providing a string specification at client address bar called as "URI".URL stands for
+Uniform Resource Identifier.
+-> There are two types of URIs are available.
+i. URN
+ii. URL
+
+Q) What is the difference between URI, URN and URL?
+-> URI is a string specification provided at client address bar, it can be used to refer a particular server side resource from client.
+-> URN is a string specification provided at client address bar, it can used to refere a particular server side resource through its logical name.
+-> URL is a string specification provided at client address bar, it can used to refer a particular resource at server machine through it's locator or URL pattern.
+
+Syntax:
+IndiGo://Hyd:Ameerpet/Durgasoft/Nagoor?Ch=10l
+ProtocolName://Server_IP_Address:Server_Port_No/AppName/resName[?Ch=101&Ca=202....]
+http://121.98.99.11:8080/loginapp/login?username=mahesh&password=lamichhane
+
+Q) What is the difference between IP Address and Port Number?
+-> Ip address is an unique identity provided to each and every machine over the network and which are provided by network manager at the time of network configuration.
+Port number is an unique identity provided to each and every process being executed at the same machine[Server Machine] and which is provided by local operating system.
+
+Q) What is Query String and what is the purpose of Query String in Web Applications?
+-> Query String is the collection of Name-Value pairs provided along with URL, it can be used to pass some input data to the respective server side resource in order 
+to execute server side resource and in order to perform server side action.
+EX: http://121.98.99.11:8080/loginapp/login?username=mahesh&password=lamichhane
+
+
+Protocol:->
+-> Protocol is an set of rules and regulations, which are used to carry data from one machine to another machine. EX: HTTP,TCP/IP,UDP,... etc. 
+-> The main intention of protocol in a client-server applications is to carry request data from client to server and to carry response data from server to client.
+
+Q) In Web Application, in general, we will use only HTTP protocol only why?
+-> In web applications, we need a protocol, it must be
+	* Connection less protocol(not to have physical connection, to have logical connection)
+	* Stateless Protocol(To remember present request data, not to remember previous request data)
+	* Compatible Protocol with HyperText Data(We need to transfer data from client to server and server to client in the form of hypertext data so we need
+		compatible protocol for hypertext data)
+-> Http protocol is having all the aboce features.
+
+Q) How Http Protocol is able to manage its Stateless nature?
+-> http closes the connection after http call completed between client and server.
+-> Http Protocol is able to provide an option to the users to submit different type of request from client.BIG-7 Http methods
+
+Http1.0:->
+1. GET
+2. POST
+3. HEAD
+
+Http1.1:->
+1. OPTIONS
+2. PUT
+3. TRACE
+4. DELETE
+
+Reserved Http Method:
+i. CONNECT
+
+Q) What are the differences between GET and POST?
+-> GET is default request type in web applications. POST is not default request type in web applications.
+-> GET request will not have body part in request format whereas POST request will have body part in request format.
+-> GET request is able to carry less data from client to server.POST request is able to carry more data from client to server.
+-> In case of GET request, if we provide request parameter data then request format is able to carry that request parameters data through its header part only,where
+request format headers part is having mermory limitation, it able to carry less data.
+In case of POST request, if we provide request parameters data the request parameters data will be transfered through request format body part only where request 
+format body part will not have memroy limitations, it able to carry more data.
+-> GET request is able to provide less security for the data whereas POST request will provide more security for the data.
+-> In case of GET request, if we provide any secure data as request parameters then that data will be displayed at address bar as query string along with URL,therefore
+, GET request will not provide security for data.
+-> In case of POST request, if we provide any sercure data as request parameters then that data will not be displayed at client address bar as query String.
+-> GET request mainly for downloading data from server whereas POST request is mainly for uploading data to the server.
+-> GET requests are supporting bookmarks whereas POST request is not supporting Booksmarks.
+-> GET request data will be stored in Browsers history whereas POST request data will not be stored in browsers history.
+-> GET requests are cached requests whereas POST requests are not cached requests.
+-> GET requests data is not encripted while transferring data in network but whereas POST request data is encripted while transferring data in network.
+-> GET request is supporting only characters data whereas POST request supporting both characters data and binary data.
+
+
+HEAD Request:->
+-> In case of HEAD request, server will send only response headers data as response, that is, metadata about the request resource which is existed at server.
+
+
+OPTIONS Request:->
+-> It can be used to get the request types which are supported by the present application server which we are using.
+
+Q) What is the difference between POST request and PUT request?
+-> In web applications, both POST and PUT request are used to perform upload operations, where POST request will not override the server side resources,but PUT request
+will override the existing resources.
+Note:-> Almost all the servers supporting POST request and No server is supporting PUT request.
+
+
+TRACE Request:->
+-> It can be used to get working status of the server side resources.
+-> it can be used to get traversal Path information of our request in the network.
+
+
+DELETE Request:->
+-> The main intention of delete request type is to delete server side resources.
+
+
+Status Codes:->
+-> Status code is a number representation, it will provide status of the present request precessing to the client.
+-> Supported status code range are
+i. 100 to 199 --> Information Static Codes.
+ii. 200 to 299 ---> Success related status codes.
+iii. 300 to 399 ---> Redirectinal Status Codes.
+iv. 400 to 499 ---> Client side error status codes.
+v. 500 to 599 ---> Server side errors status codes.
+
+
+Server:->
+-> Server is a special software installed in a server machine, it will perform the following actions in client-server applications.
+i.Takes request from client.
+ii. Identified the request resource at server side applications.
+iii. Executes the server side applications.
+iv. Generate response to client.
+
+-> Ex: Tomcat, Weblogic,JBOSS,Wildfly,Glassfish,...etc.
+-> All these server divided into two types.
+i. Web server
+ii. Application server
+
+Q)What are the differences between Web Servers and Application Servers?
+-> Web Servers are able to provide environment to design and execute web application only but whereas Application Server are providing environment to design and 
+execute both web application and distributed applications.
+-> Web Servers are not providing middlaeware services like JNDI,JTA,JAAS,JMS etc whereas Application Servers are providing middleware services like JNDI,JTA,JAAS,JMS 
+by default.
+-> server contains two modules
+i. Main Server
+ii. Container
+
+Q) What is the difference between Main Server and Container?
+-> Main Server is responsible to take request from client and to check whether request is good or not, if the request is not good then main server will send error 
+response to client, where if the request is good then main server will chek whether the request is coming for static resource or dynamic resource, if the request is
+coming for static resource then main server will send the requested static resource as response to client, if the request is coming for dynamic resource then main 
+server will forward request to container.
+-> In Web applications, Container is responsible to take request from main server and identifying the requested resource, executing the requested resource and 
+generating dynamic response to main server where main server will dispatch response to client through protocol.
+
+Note:-> Web Resources like servlet and JSPs are executed by container, not by main server.
+
+There are two ways to classify container:->
+1. As per the Tech which we used to prepare applicaions, there are two types of containers
+i. Web Container
+ii. EJB Container
+-> Web container is able to execute only web resources like servlets and jsps where EJB container is able to execute only EJB components.
+
+2. As per the Physical existency of the Container with main server, there are three types of containers
+i. Standalone Container
+ii. In Process Container
+iii. Out Of Process Container
+
+Standalone Container:->
+-> It is an integration of Main Server and Container as a single unit.
+
+In Process Container:->
+-> It is a container existed inside Main Server.
+
+Out Of Process Container:->
+-> It is a container, it will be existed in out side of the main server.
+
+
+Steps to Prepare Web Applications:->
+i. Download and Install Tomcat Server
+ii. Prepare Web Application Directory Structure at Server
+iii. Prepare Deployment Descriptor[web.xml]
+iv. Prepare Web Resources like Servlets
+v. Start server and Access Web Application.
+
+Download and Install Tomcat Server:->
+-> Download either package or installer from apache websites.
+-> Install installer on the machine.
+-> You can start tomcat server by going to installation directory bin folder and clicking on Tomcat9 application file.
+-> You can access the tomcat server by url "localhost:1010"
+-> You can change the default port number which was set during the installation by going to folder conf and modify server.xml file Connector Tag.
+<Conector port="2020" protocol="HTTP/1.1"/>
+-> You can change the username and password by clicking tomcat-users.xml file of same folder and modify user tag.
+<user username="durga" password="durga" roles="admin-gui"/>
+
+Prepare Web Application Directory Structure at Server
+-> Inside Tomcat9.0 folder multiple file are exists like bin filder.inside this folder .bat file,.exe file exists.
+-> Inside Tomcat9.0 folder conf folder there is a .xml file which contains informatin related to configuration details.
+-> Inside Tomcat9.0 folder lib folder which contains jar file(servlet and jsp related jar).in future when i prepare my servelt class and wants to compile then we definately
+goes to these jar file.
+-> Inside Tomcat9.0 folder logs filder which contains status like server started,shutodown information stored in the form of logs.
+-> it also contains temp folder which manage temporary files.
+-> it also contains work folder. the purpose of this work folder is it able to main internal processing of our servr.if we prepare a jsp page and i am submitting request
+for this jsp page. then jsp page will be executed. it will converted to servelt and servelet will be executed internally.by the execution of servlet only response we
+are getting now..java and .class files are maintained inside this folder.
+-> there is also another folder named webapps. we are going to provide our application inside this folder only.Our folder structure look like this
+themes
+   *.css
+images
+  *.jpg
+literature
+  *.doc
+src
+  *.java
+html
+ *.html
+jsp
+  *.jsp
+WEB-INF
+  lib
+    *.jar
+  web.xml
+  classes
+     * sevlet .class file
+     * filter .class file
+-> Here application folder,web-inf,classes are mandatory folder.
+-> Application directory structure is classified into two types
+i. Public Area / Client Area
+ii. Private Area / Server Area
+-> the area inside application filder and outside of web-inf area is client area while inside the web-inf folder area is private area.
+-> If we keep any resource under publi area then we are able to access that resource from client by using the respective resource name directly.
+-> In general,we will keep html files under application folder, to access these html files we will use directly html files name.
+http://localhost:1010/loginapp/loginform.html
+-> If we keep any resource under private area then we are unable to access that resource by using its name directly, we are able to access that resource through
+its alias name which we declared in web.xml file.
+
+Prepare Deployment Descriptor[web.xml]:->
+-> Deployment Descriptor is web.xml file, it will provide description or metadata about our web application which is required by the containers in order to identify
+and execute server side resources.
+-> In web applications, web.xml files responsibilities are
+1. Welcome files configuration
+2. Desplay names configuration
+3. Servlets Configuration
+4. Filters Configuration
+5. Listeners Configuration
+6. Initialization parameter Configuration
+7. Context Parameters Configuration
+8. Error Pages Configuration
+9. Session Time out Configuratin
+10. Security Configuration
+11. Taglib Configuration etc.
+
+Servlet Configuration:->
+-> In general, we will prepare Servlets under classes folder, that is private area we are unable to access servlets by using their name directly from client, to 
+access Servlets we have to define alias names for the Servlets and by using that alias names only we are able to access that Servlets.
+-> In web applications, to define alias names and to provide mapping between alias names ans Servlet Classes we have to use "Servlet Configuration" in web.xml file.
+-> To provide Servlet configuration in web.xml file we have to use the following XML tags.
+<web-app>
+	<servlet>
+		<servlet-name>Logical name</servlet-name>
+		<servlet-class>Fully Qualified Name of the Servlet class</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logical Name</servlet-name>
+		<url-pattern>/pathname</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+URL Patterns Definitations:->
+-> There are three ways t define URL Patterns in web applications.
+i. Exact Match Method
+ii. Directory Match Method
+iii. Extension Match Method
+
+Exact Match Method:->
+-> We will define an url pattern in web.xml file, it must start with /.
+EX:web.xml
+<url-pattern>/abc/xyz</url-pattern>
+-> To access the respective Servlet class we must provide and URL pattern alogn with URL at client address bar, it must be same as the URL Pattern what we define in web.xml file.
+http://localhost:1010/app1/abc/xyz
+Note:-> In web applications, when we want to access Servlets individually there we will use Exact match method to define URL pattern.
+
+
+Directory Match Method:->
+-> We will define URL pattern in web.xml file, it must start with / and it must be ended with *.
+-> In web.xml
+<url-pattern>/abc/*</url-pattern>
+-> if we want to access the respective Server side component then we must provide an URL pattern at client address bar, whose prefix value must be matched with the URL
+pattern prefix value which we specified in web.xml file.
+
+Note:-> In web applications, if we want to pass groups of request to a single component there we will use Directory Match method for defining URL Patterns.  
+
+
+
+Extension Match Method:->
+-> We will define URL pattern in web.xml, it may start with any thing but it must be ended with a particular extension.
+Ex: 
+<url-pattern>*.do</url-pattern>
+if we want to access the respective server side resource then we have to provide an URL pattern at client addrss bar, it may start with any thing but it must be ended
+with an extension which we provided in an url pattern specified in web.xml.
+http://localhost:1010/app1/login.do
+http://localhost:1010/app1/lo.do
+http://localhost:1010/app1/log.abc -> this is invalid
+Note:-> In general, in MVC based web applications,we will use a servlet as controller, it must take all request from client and it must perform actions on the 
+basis of the specified URL pattern.In this context, we will use extension match method to define URL pattern for the Controller servlet. 
+
+
+Prepare Web Resources like Servlets:->
+-> It is a server side component managed by Container, by the execution of Servlets container will generate dynamic 
+response from server to client.
+-> Servlet is a Server side program, it must implement javax.servlet.Servlet interface either directly or indirectly.
+-> To prepare Servlets, Servlet API has provided pre-defined library in the form of javax.servlet package and javax.servlet
+.http package.
+-> Servlet structure can be
+Servlet
+   |
+GenericServlet
+   |
+HttpServlet
+-> As per  the predefined library provided by Servlets, there are three ways to prepare Servlets.
+i. By Implementing Servlet Interface
+ii. By Extending GenericServlet abstract class
+iii. By Extending HttpServlet abstract class
+
+By Implementing Servlet Interface:->
+public class MyServlet implements javax.servlet.Servlet{
+//implementation for all methods of Servlet interface
+}
+
+By Extending GenericServlet abstract class:->
+public class MyServlet extends javax.servlet.GenericServlet{
+// implementation for all service provided methods
+}
+
+By Extendsing HttpServlet abstract class:->
+public class MyServlet extends HttpServlet {
+// implementation for service provided methods
+}
+
+Start Server and Access Web Application:->
+i. We can start a tomcat server by clicking the tomcat application file inside bin folder and terminate server by clicking
+extit button of the window poup up.
+ii. By typing Services in window search bar.By clicking on the Tomcat Server and click on start service on the toolbar.
+you can pause and terminate using respecitve button click.
+-> now we can access the server by sending request to http://localhost:1010/app1/login
+
+Servlets Design:->
+i. By implementing Servlet Interface
+ii. By extending GenericServlet abstract class
+iii. By extending HttpServlet abstract class
+
+
+By Implementing Servlet Interface:->
+public class MyServlet implements Servlet{
+// implementation for all methods of servlet interface
+}
+-> In servlet inteface there are 5 methods available.
+public interface Servlet{
+	public void init(ServletConfig config) throws ServletException;
+	public void service(ServletRequest req, ServletResponse res) throws ServletException,IOException;
+	public ServletConfig getServletConfig();
+	public String getServletInfo();
+	public void destory();
+}
+Note:-> init(),service() and destroy() are lifecycle methods.getServletConfig(),getServletInfo() are non lifecycle methods.
+The default content type in servlet is "text/html" only.
+
+
+Web application folder structure:->
+app01
+	|-----WEB-INF----|
+		|--- web.xml----|
+		|---classes-----|
+			|---- WelcomeServlet ---|
+			|---- WelcomeServlet.class ---|
+
+
+
+web.xml:->
+<web-app>
+	<servlet>
+		<servlet-name>welcomeServlet</servlet-name>
+		<servlet-class>WelcomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>welcomeServlet</servlet-name>
+		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+Note:-> Every servlet class name must be public.
+
+Servlet Class:->
+
+
+import javax.servlet.*;
+
+import jakarta.servlet.ServletResponse;
+
+import java.io.*;
+public class WelcomeServlet implements Servlet {
+	
+	public void init(ServletConfig config) throws ServletException
+	{
+		
+	}
+	
+	public void service(ServletRequest request,ServletResponse response) throws ServletException,IOException{
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<body>");
+		out.println("<h2>");
+		out.println("<font color='red'>");
+		out.println("<b>");
+		out.println("Welcome To Durga Software Solutions");
+		out.println("</b><hr></font></h2></body></html>");
+	}
+	
+	public ServletConfig getServletConfig() {
+		return null;
+	}
+	
+	public String getServletInfo() {
+		return null;
+	}
+	
+	public void destroy() {
+		
+	}
+	
+}
+
+Note:-> We need to set the class path to tell servlet container to load servlet related packages from the specified folder
+during the runtime. you can set the path like this and compile the java class file
+C:\Tomcat 9.0\webapps\app01\WEB-INF\classes>set classpath=C:\Tomcat 9.0\lib\servlet-api.jar;
+
+set classpath:-> set classpath=C:\Tomcat 9.0\webapps\app01\WEB-INF\classes for current directory class file
+
+Steps for client servler architecture using servlet:->
+Step-1:-> Send http request from client browser by typing "http://localhost:8080/welcome".
+Step-2:-> This url is formatted by http protocol and converts it into request format which contains headers and body parts.
+Step-3:-> Http protocol sends this request to the Main Server(Tomcat Server).Main server decides whether this request is
+static or dynamic. if request is static request which indicates to static resources then main servler fulfill that request
+by serving the static page.it this request is dynamic then tomcat server forwards this request to the tomcat container.
+Step-4:-> Tomcat server must start before sending this request.when the server is started tomcat server deploy the servlet
+application by picking then from the webapps folder.
+Step-5:-> When the request is dynamic then tomcat server forward this request to the tomcat container. tomcat container
+then creates the thread and executes it. 
+Step-6:-> This thread first reads the web.xml file. if any code problem is there then tomcat container automatically throws
+exception Servlet Exception.If the url pattern is found inside the web.xml file then thread pick up the associated class
+file for servlet from classes folder to logical place.then it converts it into bytecode then Servlet Loading is performed.
+Step-7:-> After Servlet loading servlet Instantation is preformed i.e servlet object created.
+Step-8:-> Now Servlet Initialization is performed. container will create the servlet context object for every application.
+container will also create the ServletConfig object for every servlet object and inject it into the servlet.
+Step-9:-> Now thread will call the servicee method of servlet class. before calling service method container wil create the
+ServletRequest Object and ServletResponse object and inject it into the servlet method.
+Step-10:-> Now Service Method will send some response. then tomcat container picks that response as ServletResponse send it
+to the main server(Tomcat Server).
+Step-11:-> The main server send this response to the http protocol.
+Step-12:-> Http protocol then format this request then the request with header and body will be forwarded to the client 
+browser.
+
+Drawbacks:->
+-> In this approach, to prepare Servlets, we must implement javax.servlet.Servlet interfae in an user defined class, where we must implement all the methods of
+Servlet interface irrespective of the application requirement, this approach will increase innecessary methods implementation
+in Servlet classes.
+-> To overcome the above problem we have to use GenericServlet.
+
+Note:-> When we define interface with 10 methods and we define 5 classes which implements that interface.now if there is
+some classes which doesn't want to provide implementation for somethods in parent classes. this can't be happen because when
+class implements interface that class definately provide implementation of all methods of that interface. 
+now there is a one solution for this problem, that is if we define intermidate class which implements that interface and
+provide implementation for all methods provide by parent interface. then now our classes extends that class to access the
+methods.the problem of providing the implementation by every method is gone but there is still a one problem that is we 
+need to create the object of intermediate class which is not usable so here is the comes concept of abstract class. 
+by naming that intermediate class abstract design problem will be solved completely.this is called adapter design pattern.
+mediater class is also called Generic Class or Adapter Class.this is the reason why we are going to use generic servlet.
+
+
+
+Extending Generic Servlet:->
+public abstract class GenericServlet implements Servlet{
+	
+	private transient ServletConfig config;
+	public void init(ServletConfig confi) throws ServletException
+	{
+		this.config = config;
+		init();
+	}
+	public void inint(){
+	}
+	public abstract void service(ServletRequest req, ServletResponse res) throws ServletException, IOException;
+	public ServletConfig getServletConfig(){
+	{
+		return config;
+	}
+	public String getServletInfo(){
+		return "";
+	}
+	public void destory(){
+	config = null
+	}
+}
+
+public class MyServlet extends GenericServlet{
+ -- Provide implementation for service() method.
+}
+
+
+-> In the case of implementing Servlet interface, Container will execute only one init() method in
+Servlet Initialization phase.
+-> In the case of extending genericServlet, container will execute two init() methods in Servlet
+Initialization phase.
+
+ServletConfig:->
+-> ServletConfig is an object, it able to provide all the configuration details of a particular Servlet which we provided
+in web.xml file, where the configuration details are logical name of the servlet,initial parameters of the servlet.
+-> ServletConfig is an object, it able to provide the complete view of a particular servlet.
+-> If we keep data in ServletConfig object then that data will be shared upto the respective servlet, not to all the 
+servlets.
+-> The scope of ServletConfig object is upto particular servet.
+-> ServletConfig object is will be created immediately after servlet instantiation and just before calling init method in 
+servlet initialization phase.
+-> ServletConfig object will be destroyed by the container just before Servlet Deinstantiation.
+-> The lifetime of ServletConfig object is almost all same as the lifetime of Servlet object.
+-> ServletConfig object is able to allow only parameters data, it will not allow attributes data.
+Note:-> Where Parameters data is the name-value pairs data, which will be stored at the time of creating objects like 
+request, Config,Context, ....
+-> To represent ServletConfig object, Servlet API has provided a predefined interface in the form of "javax.servlet.
+ServletConfig" and its implementation are provided by all the server vendors.
+-> There are two ways to get ServletConfig object.
+i. By using getServletConfig() method from Servlet interface.
+ii. By overriding init() method in Servlet class.
+
+By Using getServletConfig() method from Servlet Interface:->
+public ServletConfig getServletConfig()
+EX: ServletConfig config = getServletConfig();
+
+By Overriding init() method in Servlet class:->
+public class MyServlet extends GenericServlet{
+	ServletConfig config;
+	public void init(ServletConfig config) throws ServletException{
+		this.config = config;
+	}
+}
+-> To get logical name of the Servlet we have to use the following method from ServletConfig.
+public String getServletName();
+String lname = config.getServletName();
+
+-> To manage initialization parameter in Servlets, we have to use the following steps.
+i. Declare initialization parameter in web.xml file.
+  <web-app>
+	<servlet>
+		<init-param>
+			<param-name>name1</param-name>
+			<param-value>value1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>name2</param-name>
+			<param-value>value2</param-value>
+		</init-param>
+	</servlet>
+	
+  </web-app>
+
+-> If we provide initialization parameters like above in web.xml file then container will read all the initialization 
+parameters from web.xml file and container will store all these initialization parameters in the respective ServletConfig
+object.
+
+ii. Read Initialization parameter from ServletConfig object.
+-> To get initialization parameter value on the basis of parameter name we will use the following method.
+public String getInitParameter(String name);
+EX: String name = config.getInitParameter("name1");
+
+-> To get all the names of the initialization parameters from ServletConfig object we will use the following method.
+public Enumeration e = config.getInitParameterNames();
+EX: Enumeration e = config.getInitParameterNames();
+while(e.hasMoreElements()){
+	out.println(e.nextElement());
+}
+
+------------------------------------------------
+Q) What are the differences between ServletConfig and ServletContext?
+
+-> ServletConfig is an object, it able to provide all the configuration details of a particular Servlet which we provided
+in web.xml file, where the configuration details are logical name of the servlet,initial parameters of the servlet etc 
+VS
+ServletContext is an object, it able to provide all the context details of a particular web applications,where context details
+includes logical name of the web application, context parameters etc.
+
+
+-> ServletConfig is an object, it able to provide the complete view of a particular servlet
+VS 
+ServletContext ia an object, it able t provide the complete view of a particular web application.
+
+-> If we keep data in ServletConfig object then that data will be shared upto the respective servlet, not to all the 
+servlets.
+VS
+If we keep data in ServletContext object then the data will be share to all the resources which are existed in the current web application.
+
+
+-> The scope of ServletConfig object is upto particular servet.
+VS
+The scope of ServletContext object is upto a particular web application.
+
+-> Servlet Config object will provide less sharebility VS ServletContext object will provide more sharebility.
+
+-> ServletConfig object is will be created immediately after servlet instantiation and just before calling init method in 
+servlet initialization phase.
+VS
+ServletContext object will be created the moment when we start Server or the moment when we deploy web application into the server.
+
+-> ServletConfig object will be destroyed by the container just before Servlet Deinstantiation.
+VS 
+ServletContext object will be destroyed the moment when we undeploy web application and the moment when we shutdown server.
+
+
+-> The lifetime of ServletConfig object is almost all same as the lifetime of Servlet object.
+VS 
+The lifetime of ServletContext object is almost all same as the life time of web applications.
+
+-> ServletConfig object is able to allow only parameters data, it will not allow attributes data.
+VS
+ServletContext object is able to allow both parameters data and attributes data.
+
+-> ServletConfig object is able to allow only static data, that is, only parameters data.
+VS
+ServletContext object is able to allow both static data as well as parameters data.
+-------------------------------------------------------------------------------------------------
+
+ServletContext:->
+-> To represent ServletContext object, Servlet API has provided a predefined interface in the form of 
+"javax.servlet.ServletContext" and its implementations are provided by all server vendors.
+-> there are three ways to get ServletContext object
+i. By Using getServletContext() method from GenericServlet
+ServletContext context = getServletContext();
+ii. By Using getServletContext() from ServletConfig
+ServletContext context = config.getServletContext();
+iii. By Using getServletContext method from ServletRequest
+ServletContext context = request.getServletContext();
+
+-> To get logical name of the web application, first, we have to provide logical name of the web application in web.xml file.
+<web-app>
+	<display-name>logical name of the web application</display-name>
+</web-app>
+public String getServletContextName();
+
+-> To manage context parameters in web applications we have to use the following steps.
+1. Declare context paramters in web.xml file
+<web-app>
+	<context-param>
+		<param-name>name1</param-name>
+		<param-value>value1</param-value>
+	</context-param>
+</web-app>
+Note:-> If we provide context parameters like above in web.xml file then container will read all context parameters from web.xml
+file then container will read all context parameters from web.xml file and container will store all context parameters in
+ServletContext object at the time of creation.
+
+2. read context parameters from ServletContext object.
+-> To read value of a particular context parameters on the basis of name:
+public String getInitPrameter(String name);
+EX: String val = context.getInitParameter("name");
+=> TO read all names of the context parameters from ServletContext object
+public Enumeration getInitParameterNames();
+EX: Enumeration e = context.getInitParameterNames();
+while(e.hasMoreElements()){
+out.println(e.nextElement());
+}
+
+-> To keep attributes data in SevlerContext object :
+public void setAttribute(String name,Object value);
+
+-> TO get value of an attribute from ServletContext object:
+public Object getAttribute(String name);
+
+-> To remove an attribute from ServletContext object:
+public void removeAttribute(String name);
+
+-> To get all names of the attributes from ServletContext object.
+public Enumeration getAttributeNames()
+
+
+Q)What is Foreign Context?
+-> It is a ServletContext object of other application being executed at the same server.
+pubic ServletContext getContext(String path)
+-> IF the present server is supporting this method then it will return ForeignContext object reference,
+if the present server is not supporting then getContext() method will return null value.
+
+
+Preparing Servlets Applications with Eclipse IDE:->
+-> Open Eclipse and create Dynamic Web Project.
+
+
+
+HttpServlet:->
+Q) What are the differences between GenericServlet and HttpServlet?
+-> GenericServlet is protocol independent Server side mechanism VS HttpServlet is Http protocol dependent Server side mechanism.
+-> GenericServlet is able to process any type of protocol requests VS HttpServlet is able to process only Http protocol requests.
+-> GenericServlet is not providing any protocol implementation VS HttpServlet is providing Http protocol implementation because 
+HttpServlet is having doGet(),doPost(), .... , doDelete() methods w.r.t the Http Methods like GET,POST,HEAD,...DELETE.
+-> In the case of GenericServlet, Container will execute only service method for each and every request type like GET,POST,...
+DELETE. VS In case of HttpServlet, Container will execute doGet() or doPost() or ... doDelete() depending on the request type
+which we submitted from client.
+-> GenericServlet is not compatible with Protocols.VS HttpServlet is more compatible with Http protocol.
+-> GenericServlet is not frequently used server side mechanism VS HttpSerlet is frequently used server side mechanism.
+-> GenericServlet is a base implementation for all the protocol based Servlet like HttpServlet. VS HttpServlet is a sub abstract class to GenericServlet
+abstract class.
+
+public abstract class HttpServlet extends GenericServlet{
+	public void service(ServletRequest request,ServletResponse res) throws ServletException,IOException{
+		HttpServletRequest hreq = (HttpServletRequest) req;
+		HttpServletResponse hres = (HttpServletResponse) res;
+		service(hreq,hres);
+	}
+
+	protected void service(HttpServletRequest hreq,HttpServletResponse hres) throws ServletException,IOException {
+		String http_Method = hreq.getMethod();
+		if(http_Method.equals("GET")){
+			doGet(hreq,hres);
+		}
+		----------------
+		if(http_Method.equals("DELETE")){
+			doDelete(hreq,hres);
+		}
+	}
+	protected void doGet(HttpServletRequest hreq,HttpServletResponse hres) throws ServletException, IOException{
+	}
+	protected void doDelete(HttpServletRequest hreq,HttpServletResponse hres) throws ServletException, IOException{
+	}
+}
+
+
+
+
+public class MyServlet extends HttpServlet {	
+	-- Provide implementation for service provided methods
+}
+
+Q) In general, in HttpServlet we will override doXxx() methods depending on the request type which we submitted, is it possible to override service()
+in HttpServlet?
+-> Yes, it is possible to override service() methods in HttpServlet, in this context, container will execute user defined service() methods only, container will not
+execute predefined service method, in this case container will not be reached to doXxx() methods.
+Note:-> It is not suggestible to overide service(0 methods in HttpServlet, always it is suggestible to override doXxx() methods in HttpServlet depending on the
+request type.
+
+Q) Is it possible to provide both constructor and init() method in single servlet class?
+-> yes, it is possible to provide a static block, constructor,init() method, doXxx() method and destroy() method in single Servlet.
+Static Block ---> Servlet loading
+constructor ---> Servlet Instantiation
+init() ----> Servlet Initialization
+doXxxx() ---> Request Processing
+destroy() ---> Servlet Deinstantiation 
+
+
+-> If we want ot provide any constructor in servlet class then that constructor must be public and 0-arg constructor, because container will search and execute only public  
+and 0-arg constructor as part of Servlet instantiation lifecycle action.
+->> if we provide parameterized constructor then we will get javax.servlet.ServletException: Erro instantiating servlet class
+[com.durgasoft.servlets.WelcomeServlet]
+
+Q)In Servlet class, if we call destroy() method in init() method explicitly then it is possible for container to perform Servlet Deinstantiation as part of Servlet
+initialization?
+-> NO, because of destroy() method call container will not perform servlet deinstantiation as part of servlet initialization,where 
+container will execute destroy() method call as like normal java method not like servlet life cycle call.
+
+
+Servlet Life Cycle:->
+i. Servlet Loading
+Class c = Class.forname("WelcomeServlet");
+ii. Servlet Instantiation 
+WelcomeServlet ws = (WelcomeServlet).newInstance();
+iii. Servlet Initialization
+init(SC); init();
+iv. Request Processing
+GenericServlet -> service(req,resp);
+HttpServlet -> service(srq,srs);,service(hsrq,hrsp);,doXxx(hrsq,hrsp)
+v. Servlet DeInstantiation 
+destroy();
+
+
+Q) If we submit more than one request to the single servlet then what container will do?
+-> if we submit more than one request to single servlet then container will perform servler loading,servlet Instantiation
+and servlet initialization for only first request, container will not perform servlet loading, servlet instantiation and servlet initialization for all the 
+remaining requests, container will bring all the remaining requests directly to request processing phase.
+
+Note:-> Bydefault, all Servlets and Jsps are able to process multiple requests, that is, Multiple Threads at a time, so that, Bydefault , all Servlets and JSPs are
+threadsafe.
+
+javax.servlet.SingleThread Model
+public class MyServlet extends HttpServlet implements SingleThreadModel
+{
+---
+}
+-> SingleThreadModel is a deprecated interface and it is not supported by all the lateast versions of the servers.
+-> There is a one solution to this scenario is synchronization.
+public class MyServlet extends HttpServlet {
+synchronized(this){
+---app logic ---
+}
+}
+
+
+
+Load on Startup configuration:->
+<web-app>
+	<servlet>
+		<load-on-startup>Val</load-on-startup>
+	</servlet>
+</web-app>
+-> this value must be 0 or positive numbers only.
+
+Q) If more than one Servlet is having load on startup configuration in web.xml file then which servlet
+will be loaded first and which servlet will be loaded next?
+-> if any servlet is having less load on startup value then that servlet will be loaded first. if any 
+servlet is having high load on startup value then that servlet will be loaded next.
+-> if there are two servlet with same load on startup value then no body knows which servlet load at first.
+this is all upto the internal mechanism.
+
+
+Weblogic Server:
+i. Download and install weblogic server.
+ii. Prepare web application and its war file.
+iii. Start weblogic server and deploy web application
+iv. Access web application.
+v. configure weblogic server with eclipse ide.
+
+Annotation Support for Servlets:->
+Q) Is it mandatory to use web.xml file for web applications?
+case-I:-> If we are not using Servlets,Filters,Listeners in web applications then web.xml file is optional or 
+mandatory is totally depending on the servers which we used.
+In the case of the servers like tomcat web.xml file is optional.
+In the case of the servers like weblogic web.xml file is mandatory.
+case-II:-> If we are using Servlets,Filters,Listernsers in web applications then web.xml file is optional or
+mandatory is totally depending on the servlet version which we used.
+IF we use servlet2.5 version and below bersions then web.xml file is mandatory.
+If we use servlet3.0 version and aboce version then web.xml file is optional, inplace of web.xml file we are able to use "annotations".
+
+
+
+Annotations:->
+1. @WebServlet
+2. @WebInitParam
+3. @WebFilter
+4. @WebListener
+
+Note:-> all these annotation based packages are available in javax.servlet.annotation package
+
+
+@WebServlet("/welcome")
+public class WelcomeServlet extends HttpServlet {
+}
+
+Syntax:
+@WebServlet(name="---",
+	 urlPatterns={"/up1","/up2"},
+	 loadOnStartup=Val,
+	initParams={
+		@InitParam("N1",value="V1"),
+		@InitParam("N2",value="V2"),
+	}
+
+@WebServlet("/UP")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

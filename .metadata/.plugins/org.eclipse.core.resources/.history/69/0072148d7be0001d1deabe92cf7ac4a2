@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="app005 Creating servlet project with eclipse dynamic web project">
+        <property name="context-root" value="app005_Creating_servlet_project_with_eclipse_dynamic_web_project"/>
+    </wb-module>
+</project-modules>
